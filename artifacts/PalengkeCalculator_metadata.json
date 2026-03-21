@@ -199,11 +199,11 @@
 	},
 	"sources": {
 		"PalengkeCalcu.sol": {
-			"keccak256": "0x45ad37bef762d7122917df7f9e0b0a3a5ff7749abc33b2d1bb5a65f7b248baf3",
+			"keccak256": "0xbd61f36bd834c1d7b70a99f3fea89b858e521f7e83ded94fd4197ed0ca209d24",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8f58fddd7dc14eb14d1f0622686c246d15ec655f90a0168017d1c5ead7ae6f6e",
-				"dweb:/ipfs/QmPrZAV9fNMFepPL4MUyDQXE2wN2JVx1KMPeP5BFKaMGUG"
+				"bzz-raw://5acefb3fdc5dde405a9b8496887f102ca28aa90a6a6c894d640d004e92221ec9",
+				"dweb:/ipfs/QmYQSc1yywgQJkw4SFQvMXuC9rCsAiP5VJvnDG1Va7ciT1"
 			]
 		}
 	},

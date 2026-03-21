@@ -128,10 +128,10 @@
 	},
 	"sources": {
 		"PalengkeLedger.sol": {
-			"keccak256": "0x50823e233c02d31c2c8c9a67ae6beef81ec177a0980e2100a4d67a2d41334924",
+			"keccak256": "0x44f430c3f847fd7e706c898c033d29d6e8105b473ad2647d78c3b0bcd19a012f",
 			"urls": [
-				"bzz-raw://c326e9425fa1e43c60d78f19dd2c0536fc2a88ff32de9b609b6f5a554b78a63a",
-				"dweb:/ipfs/Qmc2MTXwZmvdC44JshYgjqpN3o2xCVY7aAtCQnmcJpWGUw"
+				"bzz-raw://b6c0601193a669afc790a5fb70a07bd909e1d4ec0425688671a4d1a03a667f61",
+				"dweb:/ipfs/QmNwAQf65t9dmzQ9bpWUnefd2Vc3DNymLc2Csdvkdv5Jms"
 			]
 		}
 	},
