@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numberOfCertifications",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateTotalCost",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "certificationFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCertificationFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"BrgyServcFees.sol": "BarangayServiceFees"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"BrgyServcFees.sol": {
+			"keccak256": "0xb13e85d3e8f5e5277373b4d22176d8eef5d1e62075e7028d3a464cd711b5a240",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e04ec84b331f03551c5a0f2c0ce5892df653d6b1d53782c956a9467da4f1a68",
+				"dweb:/ipfs/QmZ5rzb6Gv32MKHD1TTTt7SukBSgR3LfgKquh3Crh4J4VU"
+			]
+		}
+	},
+	"version": 1
+}
