@@ -22,6 +22,51 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "remainingBalance",
+						"type": "uint256"
+					}
+				],
+				"name": "FundsSpent",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "captain",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "currentBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getProgramDetails",
 				"outputs": [
@@ -53,16 +98,16 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "startingBalance",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "_amount",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"name": "spendFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -94,11 +139,11 @@
 	},
 	"sources": {
 		"BarangayProgramM11.sol": {
-			"keccak256": "0xe433e9716770048587fa964efc3e7e7542eb6dc27a45bba6655c1e143d15fecc",
+			"keccak256": "0x10241a4244484d3fda0219ef9a997cd2bb8adf42a2676e004388b06e970d1fab",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ebf1b9f993809c82f06320270357d0a24d2c62b1e552c97351546230cb60d66e",
-				"dweb:/ipfs/QmWT3oNaPKk3d7XsdY17c9GWQ6RVDgET51QL1irMGftDf9"
+				"bzz-raw://30b6678f57a47f9d344ead0e370d89e5584d8a41fda4ee800b59970d261bdd27",
+				"dweb:/ipfs/QmVPDNZbnMfHsDHFFj99A35iA9pt4A7C3j1pdANouSZWXx"
 			]
 		}
 	},
