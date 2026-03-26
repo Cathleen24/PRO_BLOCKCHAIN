@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"HackanaDefense1.sol": "MathLibrary"
+			"Calculator.sol": "MathLibrary"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -32,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"HackanaDefense1.sol": {
-			"keccak256": "0x5a1abd2d2b29dad9341139711f47918bf191aacce29b0a84aa8ba85bc4c7ccf3",
+		"Calculator.sol": {
+			"keccak256": "0xe6bc7f6fe5c1e5a512de0081d403eb3da893a1c8fb36fafd62bc29140597f5ee",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://81e8b8f322e0f3b4af7fd103d9fee1c67baca04983471fff7f39985926ba0706",
-				"dweb:/ipfs/QmSCxBYq5oahdCQLhvB4gcoxBzDRgDub6gEovAmcUoPhiv"
+				"bzz-raw://78046edb2caff477677e3088851eac42497ec361aa8a2f7b990a939454caec7e",
+				"dweb:/ipfs/QmbUfnP6nkgfAgSVTfmQtcNfth2Uyf6F6xL2w4g6Kjeq6K"
 			]
 		}
 	},
