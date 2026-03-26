@@ -907,11 +907,11 @@
 			]
 		},
 		"DIgitalArtToken.sol": {
-			"keccak256": "0x835edb778a8d18e3b8974857de22044b9f5a86da35a6438493b0b999744fe6dd",
+			"keccak256": "0xc8418678768c4efe3469e72a10aabf3888d318ab532c91e55678a96e9ee0d551",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6d99a956cb28fcf9cb94827241feff96ddc206f5de5bd7fe54372984ed8e93b7",
-				"dweb:/ipfs/Qme7MVUVjpNViZAcxQ91Vyk44PBZ5tQmrK14NudwPqmvH6"
+				"bzz-raw://a4bd0664f76fb76286cf7bda4c3140c8d106d3c5d35bc3cb1710cdfcc5a4df88",
+				"dweb:/ipfs/QmR8FnrpatkYk1rQXd73tsXcWfv6DhZXgDUrxGtjaLpy5R"
 			]
 		}
 	},

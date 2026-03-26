@@ -24,3 +24,4 @@ contract DigitalArtToken is ERC721URIStorage, Ownable {
         return newItemId;
     }
 }
+
