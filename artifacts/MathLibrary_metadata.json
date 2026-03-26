@@ -4,45 +4,7 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "transactionAmount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "feePercent",
-						"type": "uint256"
-					}
-				],
-				"name": "calculateFee",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "city",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			}
-		],
+		"abi": [],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -56,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"HackanaDefense1.sol": "HackanaDefense"
+			"HackanaDefense1.sol": "MathLibrary"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
