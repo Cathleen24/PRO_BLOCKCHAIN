@@ -273,5 +273,13 @@
         "file": "TrafficLightMngmnt.sol"
       }
     }
+  },
+  "LiquidityLocker.sol": {
+    "__sources__": {
+      "LiquidityLocker.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract LiquidityLocker {\r\n    address public owner;\r\n    \r\n\r\n    mapping(address => uint256) public deposits;\r\n    \r\n\r\n    mapping(address => uint256) public lockEnd;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n\r\n    function deposit() external payable {\r\n        require(msg.value > 0, \"Must send Ether\");\r\n        \r\n\r\n        deposits[msg.sender] += msg.value;\r\n        \r\n\r\n        lockEnd[msg.sender] = block.timestamp + 60; \r\n    }\r\n\r\n\r\n    function withdraw() external {\r\n\r\n        require(block.timestamp >= lockEnd[msg.sender], \"Funds are still locked\");\r\n        \r\n        uint256 amount = deposits[msg.sender];\r\n        require(amount > 0, \"No funds to withdraw\");\r\n\r\n        deposits[msg.sender] = 0;\r\n        lockEnd[msg.sender] = 0;\r\n\r\n\r\n        (bool success, ) = payable(msg.sender).call{value: amount}(\"\");\r\n        require(success, \"Transfer failed\");\r\n    }\r\n\r\n\r\n    function getTimeLeft(address _user) public view returns (uint256) {\r\n        if (block.timestamp >= lockEnd[_user]) {\r\n            return 0;\r\n        } else {\r\n            return lockEnd[_user] - block.timestamp;\r\n        }\r\n    }\r\n}",
+        "file": "LiquidityLocker.sol"
+      }
+    }
   }
 }
