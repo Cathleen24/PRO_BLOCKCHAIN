@@ -257,5 +257,13 @@
         "file": "DynamicPricing.sol"
       }
     }
+  },
+  "NFTWithRoyalties.sol": {
+    "__sources__": {
+      "NFTWithRoyalties.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract NFTWithRoyalties {\r\n    address payable public creator; \r\n    uint256 public royaltyPercentage; \r\n    address payable public currentOwner; \r\n\r\n    constructor(address payable _creator, uint256 _percentage) {\r\n        creator = _creator;\r\n        royaltyPercentage = _percentage;\r\n        currentOwner = _creator;\r\n    }\r\n\r\n    function transferNFT(address payable buyer, uint256 salePrice) public payable {\r\n\r\n        require(msg.value == salePrice, \"Incorrect payment amount\");\r\n        require(buyer != address(0), \"Invalid buyer address\");\r\n\r\n\r\n        uint256 royalty = (salePrice * royaltyPercentage) / 100;\r\n        uint256 sellerAmount = salePrice - royalty;\r\n\r\n        creator.transfer(royalty);\r\n        currentOwner.transfer(sellerAmount);\r\n        currentOwner = buyer;\r\n\r\n    }\r\n    \r\n    function getBalance() public view returns (uint256) {\r\n        return address(this).balance;\r\n    }\r\n}",
+        "file": "NFTWithRoyalties.sol"
+      }
+    }
   }
 }
