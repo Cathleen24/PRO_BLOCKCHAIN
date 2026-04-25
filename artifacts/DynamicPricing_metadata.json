@@ -1,0 +1,75 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "basePrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "demandFactor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timeFactor",
+						"type": "uint256"
+					}
+				],
+				"name": "calculatePrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"DynamicPricing.sol": "DynamicPricing"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"DynamicPricing.sol": {
+			"keccak256": "0x635fd48b7b2e0a51770f414cd1cc08ab295ddab7a5657da220e99af1aca1308d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f33b78a6033e50599eab33c12b408a07e08ba44a855e762553baebabb7dac03b",
+				"dweb:/ipfs/QmZa1zBgPU1ctkDhuU5gy8cL5eLrbrPWRZmQh8EwgfMmq7"
+			]
+		}
+	},
+	"version": 1
+}

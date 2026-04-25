@@ -249,5 +249,13 @@
         "file": "MultisigWallet.sol"
       }
     }
+  },
+  "DynamicPricing.sol": {
+    "__sources__": {
+      "DynamicPricing.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract DynamicPricing {\r\n\r\n    function calculatePrice(\r\n        uint256 basePrice,\r\n        uint256 demandFactor,\r\n        uint256 timeFactor\r\n    ) public pure returns (uint256) {\r\n        \r\n       \r\n        uint256 demandMultiplier = 100 + demandFactor;\r\n\r\n \r\n        uint256 timeMultiplier = 100 + timeFactor;\r\n\r\n        uint256 finalPrice = (basePrice * demandMultiplier * timeMultiplier) / 10000;\r\n\r\n        return finalPrice;\r\n    }\r\n}",
+        "file": "DynamicPricing.sol"
+      }
+    }
   }
 }
