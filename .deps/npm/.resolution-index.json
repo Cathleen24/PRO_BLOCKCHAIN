@@ -297,5 +297,13 @@
         "file": "BrgyLending.sol"
       }
     }
+  },
+  "brgyaidvault.sol": {
+    "__sources__": {
+      "brgyaidvault.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract BarangayAidVault {\r\n    address public owner;\r\n    mapping(address => uint256) public claimable;\r\n\r\n\r\n    event AidDeposited(address indexed donor, address indexed recipient, uint256 amount);\r\n    event AidClaimed(address indexed recipient, uint256 amount);\r\n    event EmergencyWithdrawn(uint256 amount);\r\n\r\n\r\n    modifier onlyOwner() {\r\n        require(msg.sender == owner, \"Not owner\");\r\n        _;\r\n    }\r\n\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n\r\n    function depositAid(address recipient) public payable {\r\n        require(msg.value > 0, \"Deposit amount must be greater than zero\");\r\n        require(recipient != address(0), \"Invalid recipient address\");\r\n\r\n        claimable[recipient] += msg.value;\r\n        emit AidDeposited(msg.sender, recipient, msg.value);\r\n    }\r\n\r\n \r\n    function claimAid() public {\r\n        uint256 amount = claimable[msg.sender];\r\n        \r\n\r\n        require(amount > 0, \"Nothing to claim\");\r\n\r\n\r\n        claimable[msg.sender] = 0;\r\n\r\n\r\n        payable(msg.sender).transfer(amount);\r\n        \r\n        emit AidClaimed(msg.sender, amount);\r\n    }\r\n\r\n\r\n    function emergencyWithdraw() public onlyOwner {\r\n        uint256 balance = address(this).balance;\r\n        \r\n        require(balance > 0, \"No funds to withdraw\");\r\n\r\n        payable(owner).transfer(balance);\r\n        \r\n        emit EmergencyWithdrawn(balance);\r\n    }\r\n}",
+        "file": "brgyaidvault.sol"
+      }
+    }
   }
 }
