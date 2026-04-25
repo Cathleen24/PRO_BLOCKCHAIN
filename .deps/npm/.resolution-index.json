@@ -281,5 +281,13 @@
         "file": "LiquidityLocker.sol"
       }
     }
+  },
+  "SimpleStaker.sol": {
+    "__sources__": {
+      "SimpleStaker.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ninterface IERC20 {\r\n    function transfer(address to, uint256 amount) external returns (bool);\r\n    function transferFrom(address from, address to, uint256 amount) external returns (bool);\r\n    function balanceOf(address account) external view returns (uint256);\r\n}\r\n\r\ncontract SimpleStaker {\r\n    IERC20 public stakingToken;\r\n    uint256 public lockDuration = 60; // 1 minute\r\n\r\n    struct Stake {\r\n        uint256 amount;\r\n        uint256 unlockTime;\r\n    }\r\n\r\n    mapping(address => Stake) public stakes;\r\n\r\n    constructor(address _token) {\r\n        stakingToken = IERC20(_token);\r\n    }\r\n\r\n\r\n    function stake(uint256 amount) public {\r\n        require(amount > 0, \"Cannot stake 0 tokens\");\r\n        \r\n \r\n        bool success = stakingToken.transferFrom(msg.sender, address(this), amount);\r\n        require(success, \"Transfer failed\");\r\n\r\n\r\n        stakes[msg.sender] = Stake({\r\n            amount: amount,\r\n            unlockTime: block.timestamp + lockDuration\r\n        });\r\n    }\r\n\r\n\r\n    function unstake() public {\r\n        Stake memory userStake = stakes[msg.sender];\r\n\r\n\r\n        require(userStake.amount > 0, \"No active stake found\");\r\n        require(block.timestamp >= userStake.unlockTime, \"Stake is still locked\");\r\n\r\n\r\n        uint256 totalToWithdraw = (userStake.amount * 110) / 100;\r\n\r\n\r\n        uint256 contractBalance = stakingToken.balanceOf(address(this));\r\n        require(contractBalance >= totalToWithdraw, \"Contract has insufficient rewards\");\r\n\r\n\r\n        delete stakes[msg.sender];\r\n\r\n\r\n        bool success = stakingToken.transfer(msg.sender, totalToWithdraw);\r\n        require(success, \"Withdrawal transfer failed\");\r\n    }\r\n}",
+        "file": "SimpleStaker.sol"
+      }
+    }
   }
 }
