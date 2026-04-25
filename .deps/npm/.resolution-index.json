@@ -289,5 +289,13 @@
         "file": "SimpleStaker.sol"
       }
     }
+  },
+  "BrgyLending.sol": {
+    "__sources__": {
+      "BrgyLending.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract BarangayLending {\r\n    struct LoanRequest {\r\n        address payable borrower; \r\n        uint256 amount;\r\n        string reason;\r\n        bool isFunded;\r\n        address lender;\r\n    }\r\n\r\n    uint256 public loanCounter;\r\n    mapping(uint256 => LoanRequest) public loans;\r\n\r\n    event LoanRequested(uint256 loanId, address borrower, uint256 amount, string reason);\r\n    event LoanFunded(uint256 loanId, address lender);\r\n\r\n\r\n    function requestLoan(uint256 amount, string memory reason) public {\r\n        require(amount > 0, \"Amount must be greater than zero\");\r\n        \r\n        loanCounter++;\r\n        loans[loanCounter] = LoanRequest({\r\n            borrower: payable(msg.sender),\r\n            amount: amount,\r\n            reason: reason,\r\n            isFunded: false,\r\n            lender: address(0)\r\n        });\r\n\r\n        emit LoanRequested(loanCounter, msg.sender, amount, reason);\r\n    }\r\n\r\n\r\n    function fundLoan(uint256 loanId) public payable {\r\n\r\n        LoanRequest storage loan = loans[loanId];\r\n\r\n\r\n        require(loan.amount > 0, \"Loan does not exist\");\r\n        require(!loan.isFunded, \"Loan already funded\");\r\n        require(msg.value == loan.amount, \"Must send exact loan amount\");\r\n\r\n        loan.isFunded = true;\r\n        loan.lender = msg.sender;\r\n\r\n\r\n        loan.borrower.transfer(msg.value);\r\n\r\n        emit LoanFunded(loanId, msg.sender);\r\n    }\r\n}",
+        "file": "BrgyLending.sol"
+      }
+    }
   }
 }
