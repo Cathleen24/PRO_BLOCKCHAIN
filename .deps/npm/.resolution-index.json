@@ -265,5 +265,13 @@
         "file": "NFTWithRoyalties.sol"
       }
     }
+  },
+  "TrafficLightMngmnt.sol": {
+    "__sources__": {
+      "TrafficLightMngmnt.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract TrafficLightManager {\r\n    // Mapping to track traffic light states by intersection name\r\n    mapping(string => string) public lightState;\r\n\r\n    // 1. Constructor: Initialize default states\r\n    constructor() {\r\n        lightState[\"intersection1\"] = \"red\";\r\n        lightState[\"intersection2\"] = \"red\";\r\n    }\r\n\r\n    /**\r\n     * @dev Updates the light state for a specific intersection.\r\n     * Only \"red\", \"yellow\", and \"green\" are allowed.\r\n     */\r\n    function changeLight(string memory intersection, string memory newState) public {\r\n        // 2. Validate that the newState is one of the allowed values\r\n        // We use keccak256(abi.encodePacked(s)) to compare strings in Solidity\r\n        require(\r\n            keccak256(abi.encodePacked(newState)) == keccak256(abi.encodePacked(\"red\")) ||\r\n            keccak256(abi.encodePacked(newState)) == keccak256(abi.encodePacked(\"yellow\")) ||\r\n            keccak256(abi.encodePacked(newState)) == keccak256(abi.encodePacked(\"green\")),\r\n            \"Invalid state! State must be 'red', 'yellow', or 'green'.\"\r\n        );\r\n\r\n        // 3. Update the mapping with the valid new state\r\n        lightState[intersection] = newState;\r\n    }\r\n}",
+        "file": "TrafficLightMngmnt.sol"
+      }
+    }
   }
 }

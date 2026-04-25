@@ -1,0 +1,92 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "intersection",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "newState",
+						"type": "string"
+					}
+				],
+				"name": "changeLight",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "lightState",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"changeLight(string,string)": {
+					"details": "Updates the light state for a specific intersection. Only \"red\", \"yellow\", and \"green\" are allowed."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TrafficLightMngmnt.sol": "TrafficLightManager"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TrafficLightMngmnt.sol": {
+			"keccak256": "0x632837add98ff6e8253e3ae180579c53edf630e5ec3b5599c60700f968220f5a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://465e5305444c482dec4758a3cebff9b2080caf9500cbe09ff94ee9ae126e2e75",
+				"dweb:/ipfs/QmRwpZyGiidj2w4hXovYmhrzXqeuQ87vxxbWdWyK5JT2n2"
+			]
+		}
+	},
+	"version": 1
+}
